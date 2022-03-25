@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БизнесАренда</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="src/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/src/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top row align-items-center justify-content-between">
+                <div class="col-lg-4 d-flex">
+                    <div class="header__logo">
+                        <img src="/src/img/logo.svg" alt="">
+                    </div>
+                    <a href="#" id="js-open-popup" class="link header__location d-flex align-items-center">
+                        <svg class="icon">
+                            <use xlink:href="src/img/sprite.svg#location"></use>
+                        </svg>
+                        <span>Петрозаводск</span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 d-flex justify-content-between">
+                    <a href="#" class="link header__login d-flex align-items-center">
+                        <svg class="icon">
+                            <use xlink:href="src/img/sprite.svg#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </a>
+                    <button class="btn btn-trp">
+                        Новое объявление
+                    </button>
+                </div>
+            </div>
+            <div class="header__bottom row align-items-center justify-content-between">
+                <div class="d-none d-xl-block col-xl-7">
+                    <nav class="header__menu d-flex">
+                        <a href="#" class="link menu__item">Аренда</a>
+                        <a href="#" class="link menu__item">Продажа</a>
+                        <a href="#" class="link menu__item">Каталог организаций</a>
+                        <a href="#" class="link menu__item">Консультация юриста</a>
+                        <a href="#" class="link menu__item">Материалы</a>
+                    </nav>
+                </div>
+
+                <div class="col-lg-3 d-flex justify-content-between">
+                    <a href="#" class="link header__action active d-flex align-items-center">
+                        <svg class="icon icon-big heart">
+                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                        </svg>
+                        <span class="action__counter">23</span>
+                        <span>Избранное</span>
+                    </a>
+                    <a href="#" class="link header__action d-flex align-items-center">
+                        <svg class="icon icon-big">
+                            <use xlink:href="src/img/sprite.svg#rate"></use>
+                        </svg>
+                        <span class="action__counter">23</span>
+                        <span>Сравнение</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-9 col-xl-7">
+                    <h1>База коммерческой недвижимости <span>Петрозоводска</span></h1>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="filter__tabs">
+                    <div class="filter__tab tab active" data-group="filter" data-target="#filterRent">Аренда</div>
+                    <div class="filter__tab tab" data-group="filter" data-target="#filterSale">Продажа</div>
+                </div>
+                <div class="filter__body">
+                    <div class="filter__tab-content tab-content" data-group="filter" id="filterRent">
+                        <form action="">
+                            <div class="form-control dropdown-control select">
+                                <label for="">Вид объекта</label>
+                                <input id="object" type="text">
+                                <div class="dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <input type="checkbox" id="object1" value="1">
+                                            <label for="object1" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object2" value="2">
+                                            <label for="object2" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object3" value="3">
+                                            <label for="object3" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control square">
+                                <label for="">Площадь</label>
+                                <input id="square" type="text">
+                                <div class="dropdown square__dropdown">
+                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-control dropdown-control square mr-6px">
+                                            <label for="square1">от</label>
+                                            <input id="square1" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 м²</li>
+                                                    <li>70 м²</li>
+                                                    <li>90 м²</li>
+                                                    <li>100 м²</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-control dropdown-control square">
+                                            <label for="square2">до</label>
+                                            <input id="square2" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 м²</li>
+                                                    <li>70 м²</li>
+                                                    <li>90 м²</li>
+                                                    <li>100 м²</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control price">
+                                <label for="">Цена</label>
+                                <input id="price" type="text">
+                                <div class="dropdown price__dropdown">
+                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-control dropdown-control square mr-6px">
+                                            <label for="price1">от</label>
+                                            <input id="price1" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 тыс ₽</li>
+                                                    <li>70 тыс ₽</li>
+                                                    <li>90 тыс ₽</li>
+                                                    <li>100 тыс ₽</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-control dropdown-control square">
+                                            <label for="price2">до</label>
+                                            <input id="price2" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 тыс ₽</li>
+                                                    <li>70 тыс ₽</li>
+                                                    <li>90 тыс ₽</li>
+                                                    <li>100 тыс ₽</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-fill filter__btn">
+                                <span>Показать</span>
+                                <span class="btn__counter">866</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="filter__tab-content tab-content d-none" data-group="filter" id="filterSale">
+                        <form action="">
+                            <div class="form-control dropdown-control select">
+                                <label for="">Вид объекта</label>
+                                <input id="object" type="text">
+                                <div class="dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <input type="checkbox" id="object1" value="1">
+                                            <label for="object1" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object2" value="2">
+                                            <label for="object2" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object3" value="3">
+                                            <label for="object3" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control square">
+                                <label for="">Площадь</label>
+                                <input id="square" type="text">
+                                <div class="dropdown square__dropdown">
+                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-control dropdown-control square mr-6px">
+                                            <label for="square1">от</label>
+                                            <input id="square1" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 м²</li>
+                                                    <li>70 м²</li>
+                                                    <li>90 м²</li>
+                                                    <li>100 м²</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-control dropdown-control square">
+                                            <label for="square2">до</label>
+                                            <input id="square2" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 м²</li>
+                                                    <li>70 м²</li>
+                                                    <li>90 м²</li>
+                                                    <li>100 м²</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control price">
+                                <label for="">Цена</label>
+                                <input id="price" type="text">
+                                <div class="dropdown price__dropdown">
+                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-control dropdown-control square mr-6px">
+                                            <label for="price1">от</label>
+                                            <input id="price1" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 тыс ₽</li>
+                                                    <li>70 тыс ₽</li>
+                                                    <li>90 тыс ₽</li>
+                                                    <li>100 тыс ₽</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-control dropdown-control square">
+                                            <label for="price2">до</label>
+                                            <input id="price2" type="text">
+                                            <div class="dropdown p-0">
+                                                <ul class="dropdown__list">
+                                                    <li>50 тыс ₽</li>
+                                                    <li>70 тыс ₽</li>
+                                                    <li>90 тыс ₽</li>
+                                                    <li>100 тыс ₽</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-fill filter__btn">
+                                <span>Показать</span>
+                                <span class="btn__counter">125</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular">
+        <div class="container">
+            <h2>Популярные объекты</h2>
+
+            <div class="slider main-carousel">
+                <div class="popular__item card d-flex">
+                    <div class="popular__images">
+                        <div class="images__item images__item--big" style="background-image:url(/src/img/popular1.jpg)">
+                        </div>
+                        <div class="d-flex">
+                            <div class="images__item images__item--small"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                            <div class="images__item images__item--small d-none d-sm-block"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                            <div class="images__item images__item--small overlay"
+                                style="background-image:url(/src/img/popular1.jpg)"><span>+3</span></div>
+                        </div>
+                    </div>
+                    <div class="popular__img images__item d-none" style="background-image:url(/src/img/default.jpg)">
+                    </div>
+
+                    <div class="popular__info d-flex">
+                        <div class="info__left">
+                            <div class="space-card__title mb-8px">Свободного назначения, 82.2 м²</div>
+                            <div class="space-card__price mb-8px">199 320 000 ₽/мес</div>
+                            <div class="space-card__params mb-8px">
+                                <span>15 166 ₽/м²</span>
+                                <span>3 этаж из 3</span>
+                            </div>
+                            <p class="space-card__text">
+                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                в 10 мин. пешком от
+                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                в 10 мин. пешком от
+                            </p>
+                            <div class="space-card__metro d-flex ">
+                                <div class="metro__icons">
+                                    <div class="metro__icon line-red"></div>
+                                    <div class="metro__icon line-blue"></div>
+                                </div>
+                                <span>Верхние Лихоборы</span>
+                            </div>
+                            <div class="space-card__address">Верхнелихоборская 8</div>
+                            <div class="space-card__date">Вчера, 12:20</div>
+                        </div>
+                        <div class="info-right d-flex flex-column justify-content-between">
+                            <object>
+                                <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </object>
+                            <div class="space-card__status">
+                                <span title="Поднятое объявление" class="d-none">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#rise"></use>
+                                    </svg>
+                                </span>
+                                <span title="Премиум объявление" class="">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#premium"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular__item card d-flex">
+                    <div class="popular__images">
+                        <div class="images__item images__item--big" style="background-image:url(/src/img/popular1.jpg)">
+                        </div>
+                        <div class="d-flex">
+                            <div class="images__item images__item--small"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                            <div class="images__item images__item--small"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="popular__img images__item d-none" style="background-image:url(/src/img/default.jpg)">
+                    </div>
+
+                    <div class="popular__info d-flex">
+                        <div class="info__left">
+                            <div class="space-card__title mb-8px">Свободного назначения, 82.2 м²</div>
+                            <div class="space-card__price mb-8px">199 320 000 ₽/мес</div>
+                            <div class="space-card__params mb-8px">
+                                <span>15 166 ₽/м²</span>
+                                <span>3 этаж из 3</span>
+                            </div>
+                            <p class="space-card__text">
+                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                в 10 мин. пешком от
+                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                в 10 мин. пешком от
+                            </p>
+                            <div class="space-card__metro d-flex ">
+                                <div class="metro__icons">
+                                    <div class="metro__icon line-red"></div>
+                                    <div class="metro__icon line-blue"></div>
+                                </div>
+                                <span>Верхние Лихоборы</span>
+                            </div>
+                            <div class="space-card__address">Верхнелихоборская 8</div>
+                            <div class="space-card__date">Вчера, 12:20</div>
+                        </div>
+                        <div class="info-right d-flex flex-column justify-content-between">
+                            <object>
+                                <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </object>
+                            <div class="space-card__status">
+                                <span title="Поднятое объявление" class="d-none">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#rise"></use>
+                                    </svg>
+                                </span>
+                                <span title="Премиум объявление" class="">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#premium"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular__item card d-flex">
+                    <div class="popular__images d-none">
+                        <div class="images__item images__item--big"></div>
+                        <div class="images__item images__item--small"></div>
+                        <div class="images__item images__item--small"></div>
+                        <div class="images__item images__item--small overlay" data-count="3"></div>
+                    </div>
+                    <div class="popular__img images__item" style="background-image:url(/src/img/default.jpg)"></div>
+
+                    <div class="popular__info d-flex">
+                        <div class="info__left">
+                            <div class="space-card__title mb-8px">Свободного назначения длинное название объявления вот
+                                такое</div>
+                            <div class="space-card__price mb-8px">199 320 000 ₽/мес</div>
+                            <div class="space-card__params">
+                                <span>15 166 ₽/м²</span>
+                                <span>3 этаж из 3</span>
+                            </div>
+                            <p class="space-card__text">
+                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                в 10 мин. пешком от
+                            </p>
+                            <div class="space-card__metro d-flex ">
+                                <div class="metro__icons">
+                                    <div class="metro__icon line-red"></div>
+                                    <div class="metro__icon line-blue"></div>
+                                </div>
+                                <span>Верхние Лихоборы</span>
+                            </div>
+                            <div class="space-card__address">Верхнелихоборская 8</div>
+                            <div class="space-card__date">Вчера, 12:20</div>
+                        </div>
+                        <div class="info-right d-flex flex-column justify-content-between">
+                            <object>
+                                <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                            </object>
+                            <div class="space-card__status">
+                                <span title="Поднятое объявление" class="d-none">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#rise"></use>
+                                    </svg>
+                                </span>
+                                <span title="Премиум объявление" class="">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#premium"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="find-space">
+        <div class="container">
+            <h2>Подобрать помещение</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card min-h-100">
+                        <h3>Аренда коммерческой недвижимости</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-no-marker">
+                                    <li class="sublist-title">
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Торговая недвижимость
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <ul class="list-no-marker sublist">
+                                        <li>
+                                            <a href="#" class="link d-flex align-items-center">
+                                                Торговые центры
+                                                <div class="find-space__counter">
+                                                    234
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="link d-flex align-items-center">
+                                                Магазины
+                                                <div class="find-space__counter">
+                                                    234
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="link d-flex align-items-center">
+                                                Другие помещения
+                                                <div class="find-space__counter">
+                                                    234
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Офисная недвижимость
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Промышленная недвижимость
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-no-marker">
+                                    <li>
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Складские помещения
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Земельные участки
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Универсальные помещения
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link d-flex align-items-center">
+                                            Недвижимость в сфере услуг
+                                            <div class="find-space__counter">
+                                                234
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card min-h-100">
+                        <h3>Продажа</h3>
+                        <ul class="list-no-marker">
+                            <li>
+                                <a href="#" class="link d-flex align-items-center">
+                                    Торговая недвижимость
+                                    <div class="find-space__counter">
+                                        234
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link d-flex align-items-center">
+                                    Офисная недвижимость
+                                    <div class="find-space__counter">
+                                        234
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link d-flex align-items-center">
+                                    Промышленная недвижимость
+                                    <div class="find-space__counter">
+                                        234
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link d-flex align-items-center">
+                                    Складские помещения
+                                    <div class="find-space__counter">
+                                        234
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link d-flex align-items-center">
+                                    Земельные участки
+                                    <div class="find-space__counter">
+                                        234
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link d-flex align-items-center">
+                                    Универсальные помещения
+                                    <div class="find-space__counter">
+                                        234
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advertisment">
+        <div class="container text-center">
+            <img src="/src/img/adv-img1.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="rent">
+        <div class="container">
+            <h2 class="mb-24px">Помещения в аренду</h2>
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-16px">
+                    <a href="#" class="card space-card d-flex flex-column min-h-100">
+                        <div class="space-card__img" style="background-image: url(src/img/space1.jpg);"></div>
+                        <div class="space-card__info d-flex">
+                            <div class="info__left">
+                                <div class="space-card__title">Свободного назначения, 82.2 м²</div>
+                                <div class="space-card__price">199 320 000 ₽/мес</div>
+                                <div class="space-card__params">
+                                    <span>15 166 ₽/м²</span>
+                                    <span>3 этаж из 3</span>
+                                </div>
+                                <div class="space-card__metro d-flex ">
+                                    <div class="metro__icons">
+                                        <div class="metro__icon line-red"></div>
+                                        <div class="metro__icon line-blue"></div>
+                                    </div>
+                                    <span>Верхние Лихоборы</span>
+                                </div>
+                                <div class="space-card__address">Верхнелихоборская 8</div>
+                                <div class="space-card__date">Вчера, 12:20</div>
+                            </div>
+                            <div class="info-right d-flex flex-column justify-content-between">
+                                <object>
+                                    <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                </object>
+                                <div class="space-card__status">
+                                    <span title="Поднятое объявление" class="d-none">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#rise"></use>
+                                        </svg>
+                                    </span>
+                                    <span title="Премиум объявление" class="">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#premium"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-16px">
+                    <a href="#" class="card space-card d-flex flex-column min-h-100">
+                        <div class="space-card__img" style="background-image: url(src/img/space2.jpg);"></div>
+                        <div class="space-card__info d-flex">
+                            <div class="info__left">
+                                <div class="space-card__title">Офис, 193.3 м²</div>
+                                <div class="space-card__price">106 860 ₽/мес</div>
+                                <div class="space-card__params">
+                                    <span>15 166 ₽/м²</span>
+                                    <span>1 этаж из 15</span>
+                                </div>
+
+                                <div class="space-card__address">Василия Ощепкова 2</div>
+                                <div class="space-card__date">Вчера, 12:20</div>
+                            </div>
+                            <div class="info-right d-flex flex-column justify-content-between">
+                                <object>
+                                    <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                </object>
+                                <div class="space-card__status">
+                                    <span title="Поднятое объявление" class="d-none">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#rise"></use>
+                                        </svg>
+                                    </span>
+                                    <span title="Премиум объявление" class="">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#premium"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-fill">
+                    <span>Помещения в аренду</span>
+                    <span class="btn__counter">866</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="advertisment">
+        <div class="container text-center">
+            <img src="/src/img/adv-img2.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="sale">
+        <div class="container">
+            <h2 class="mb-24px">Помещения на продажу</h2>
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-16px">
+                    <a href="#" class="card space-card d-flex flex-column min-h-100">
+                        <div class="space-card__img" style="background-image: url(src/img/space1.jpg);"></div>
+                        <div class="space-card__info d-flex">
+                            <div class="info__left">
+                                <div class="space-card__title">Свободного назначения, 82.2 м²</div>
+                                <div class="space-card__price">199 320 000 ₽/мес</div>
+                                <div class="space-card__params">
+                                    <span>15 166 ₽/м²</span>
+                                    <span>3 этаж из 3</span>
+                                </div>
+                                <div class="space-card__metro d-flex ">
+                                    <div class="metro__icons">
+                                        <div class="metro__icon line-red"></div>
+                                        <div class="metro__icon line-blue"></div>
+                                    </div>
+                                    <span>Верхние Лихоборы</span>
+                                </div>
+                                <div class="space-card__address">Верхнелихоборская 8</div>
+                                <div class="space-card__date">Вчера, 12:20</div>
+                            </div>
+                            <div class="info-right d-flex flex-column justify-content-between">
+                                <object>
+                                    <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                </object>
+                                <div class="space-card__status">
+                                    <span title="Поднятое объявление" class="d-none">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#rise"></use>
+                                        </svg>
+                                    </span>
+                                    <span title="Премиум объявление" class="">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#premium"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-16px">
+                    <a href="#" class="card space-card d-flex flex-column min-h-100">
+                        <div class="space-card__img" style="background-image: url(src/img/space2.jpg);"></div>
+                        <div class="space-card__info d-flex">
+                            <div class="info__left">
+                                <div class="space-card__title">Офис, 193.3 м²</div>
+                                <div class="space-card__price">106 860 ₽/мес</div>
+                                <div class="space-card__params">
+                                    <span>15 166 ₽/м²</span>
+                                    <span>1 этаж из 15</span>
+                                </div>
+
+                                <div class="space-card__address">Василия Ощепкова 2</div>
+                                <div class="space-card__date">Вчера, 12:20</div>
+                            </div>
+                            <div class="info-right d-flex flex-column justify-content-between">
+                                <object>
+                                    <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                </object>
+                                <div class="space-card__status">
+                                    <span title="Поднятое объявление" class="d-none">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#rise"></use>
+                                        </svg>
+                                    </span>
+                                    <span title="Премиум объявление" class="">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#premium"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-fill">
+                    <span>Помещения на продажу</span>
+                    <span class="btn__counter">866</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="advertisment">
+        <div class="container text-center">
+            <img src="/src/img/adv-img3.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="materials">
+        <div class="container">
+            <h2>Интерестные материалы</h2>
+            <div class="materials__tabs">
+                <div class="materials__tab tab active" data-group="materials" data-target="#news">Новости</div>
+                <div class="materials__tab tab" data-group="materials" data-target="#analitics">Аналитика</div>
+                <div class="materials__tab tab" data-group="materials" data-target="#events">Мероприятия</div>
+                <div class="materials__tab tab" data-group="materials" data-target="#articles">Статьи</div>
+            </div>
+            <div class="materials__tab-content tab-content" data-group="materials" id="news">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-16px">
+                        <a href="#" class="card materials-card min-h-md-100 d-flex d-md-block">
+                            <div class="materials-card__img" style="background-image:url(/src/img/news1.jpg)"></div>
+                            <div class="materials-card__info">
+                                <div class="materials-card__title">
+                                    Цвет настроения «зеленый»: победители GREEN Awards 2019
+                                </div>
+                                <div class="materials-card__date">
+                                    10.10.2022
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-16px">
+                        <a href="#" class="card materials-card min-h-md-100 d-flex d-md-block">
+                            <div class="materials-card__img" style="background-image:url(/src/img/news2.jpg)"></div>
+                            <div class="materials-card__info">
+                                <div class="materials-card__title">
+                                    PRO Склады: чего хотят арендаторы? </div>
+                                <div class="materials-card__date">
+                                    10.10.2022
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="materials__tab-content tab-content d-none" data-group="materials" id="analitics"></div>
+            <div class="materials__tab-content tab-content d-none" data-group="materials" id="events"></div>
+            <div class="materials__tab-content tab-content d-none" data-group="materials" id="articles"></div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>О портале БизнесАренда</h2>
+            <p>
+                Сайт БизнесАренда полезен как арендодателям, так и арендаторам. Здесь вы найдёте <a href="#"
+                    class="link-inverse">объявления по аренде</a> или <a href="#" class="link-inverse">продаже
+                    коммерческой недвижимости</a> в Москве, новости, статьи, аналитические обзоры, интервью с
+                непосредственными участниками рынка.
+                <br><br>
+                Вам доступны данные о предстоящих мероприятиях, агентствах, специализирующихся на московской
+                коммерческой недвижимости.
+                <br><br>
+                Вы можете задать вопрос юристу или поучаствовать в опросах.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block card">
+                <div class="footer__logo">
+                    <img src="src/img/logo.svg" alt="">
+                </div>
+                <nav class="footer__menu d-flex flex-wrap">
+                    <a href="#" class="link footer__link">О проекте</a>
+                    <a href="#" class="link footer__link">Правила</a>
+                    <a href="#" class="link footer__link">Помощь</a>
+                    <a href="#" class="link footer__link">Реклама на сайте</a>
+                    <a href="#" class="link footer__link">XML выгрузка</a>
+                    <a href="#" class="link footer__link">Контакты</a>
+                </nav>
+                <div class="footer__contacts">
+                    <a class="link contacts__mailto" href="mailto:realty@biznesarenda.ru">
+                        realty@biznesarenda.ru
+                        <span>по вопросам сотрудничества</span>
+                    </a>
+                    <a class="link contacts__mailto" href="mailto:support@biznesarenda.ru">
+                        support@biznesarenda.ru
+                        <span>техническая поддержка</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <a href="#" class="link link--light d-flex align-items-center">
+                    <img src="src/img/domclick.svg" alt="">
+                    Новостройки
+                </a>
+                <a href="#" class="link link--light d-flex align-items-center">
+                    <img src="src/img/myroom.svg" alt="">
+                    МнеКвартиру
+                </a>
+            </div>
+            <div class="footer__copyright">
+                <a href="#" class="copyright__link">© Copyright 2013-2022 БизнесАренда — коммерческая недвижимость,
+                    Москва. Все права защищены.</a>
+                <a href="#" class="copyright__link">Политика конфиденциальности</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <div id="js-board" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="board__top-wrap d-flex align-items-center justify-content-between">
+                                    <h2 class="board__title">Выберите город</h2>
+                                    <button class="board__btn btn btn-trp btn--little js-close-popup">
+                                        <svg>
+                                            <use xlink:href="src/img/sprite.svg#cross-blue"></use>
+                                        </svg>
+                                        Закрыть
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input class="board__input" placeholder="Начните вводить название города" type="text">
+                            </div>
+                            <div class="col-12">
+                                <div class="board__most-cities-wrap d-flex">
+                                    <p class="link">Москва</p>
+                                    <p class="link">Санкт-Петербург</p>
+                                    <p class="link">Краснодар</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="overflow: auto;">
+                        <div class="row">
+                            <div class="col-12 board__overflow">
+                                <div class="board__cols">
+                                    <div class="alphabet-group">
+                                        <p class="link">Абакан</p>
+                                        <p class="link">Анадырь</p>
+                                        <p class="link">Архангельск</p>
+                                        <p class="link">Астрахань</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                        <p class="link">Брянск</p>
+                                        <p class="link">Благовещенск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Горно-Алтайск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                        <p class="link">Брянск</p>
+                                        <p class="link">Благовещенск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Барнаул</p>
+                                        <p class="link">Белгород</p>
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Благовещенск</p>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <p class="link">Биробиджан</p>
+                                        <p class="link">Выхухоль</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
