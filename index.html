@@ -145,30 +145,25 @@
                                 <input id="square" type="text">
                                 <div class="dropdown square__dropdown">
                                     <div class="filter__clear" id="filterClear">сбросить</div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="form-control dropdown-control square mr-6px">
-                                            <label for="square1">от</label>
-                                            <input id="square1" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 м²</li>
-                                                    <li>70 м²</li>
-                                                    <li>90 м²</li>
-                                                    <li>100 м²</li>
-                                                </ul>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control square">
+                                                <label for="square1">от</label>
+                                                <input id="square1" type="text">
                                             </div>
                                         </div>
-                                        <div class="form-control dropdown-control square">
-                                            <label for="square2">до</label>
-                                            <input id="square2" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 м²</li>
-                                                    <li>70 м²</li>
-                                                    <li>90 м²</li>
-                                                    <li>100 м²</li>
-                                                </ul>
+                                        <div class="dropdown__item">
+                                            <div class="form-control dropdown-control square">
+                                                <label for="square2">до</label>
+                                                <input id="square2" type="text">
                                             </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 м²</li>
+                                                <li>70 м²</li>
+                                                <li>90 м²</li>
+                                                <li>100 м²</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -178,30 +173,25 @@
                                 <input id="price" type="text">
                                 <div class="dropdown price__dropdown">
                                     <div class="filter__clear" id="filterClear">сбросить</div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="form-control dropdown-control square mr-6px">
-                                            <label for="price1">от</label>
-                                            <input id="price1" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 тыс ₽</li>
-                                                    <li>70 тыс ₽</li>
-                                                    <li>90 тыс ₽</li>
-                                                    <li>100 тыс ₽</li>
-                                                </ul>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control price mr-6px">
+                                                <label for="price1">от</label>
+                                                <input id="price1" type="text">
                                             </div>
                                         </div>
-                                        <div class="form-control dropdown-control square">
-                                            <label for="price2">до</label>
-                                            <input id="price2" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 тыс ₽</li>
-                                                    <li>70 тыс ₽</li>
-                                                    <li>90 тыс ₽</li>
-                                                    <li>100 тыс ₽</li>
-                                                </ul>
+                                        <div class="dropdown__item">
+                                            <div class="form-control price">
+                                                <label for="price2">до</label>
+                                                <input id="price2" type="text">
                                             </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 ₽</li>
+                                                <li>70 ₽</li>
+                                                <li>90 ₽</li>
+                                                <li>100 ₽</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -698,7 +688,7 @@
                         <div class="space-card__img" style="background-image: url(src/img/space1.jpg);"></div>
                         <div class="space-card__info d-flex">
                             <div class="info__left">
-                                <div class="space-card__title">Свободного назначения, 82.2 м²</div>
+                                <div class="space-card__title">Свободного назначения бла бла бла длинное название, 82.2 м²</div>
                                 <div class="space-card__price">199 320 000 ₽/мес</div>
                                 <div class="space-card__params">
                                     <span>15 166 ₽/м²</span>
@@ -1045,63 +1035,53 @@
                             <div class="col-12 board__overflow">
                                 <div class="board__cols">
                                     <div class="alphabet-group">
-                                        <p class="link">Абакан</p>
-                                        <p class="link">Анадырь</p>
-                                        <p class="link">Архангельск</p>
-                                        <p class="link">Астрахань</p>
+                                        <a href="#" class="link">Абакан</a>
+                                        <a href="#" class="link">Анадырь</a>
+                                        <a href="#" class="link">Архангельск</a>
+                                        <a href="#" class="link">Астрахань</a>
                                     </div>
                                     <div class="alphabet-group">
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
-                                        <p class="link">Брянск</p>
-                                        <p class="link">Благовещенск</p>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Брянск</a>
+                                        <a href="#" class="link">Благовещенск</a>
                                     </div>
                                     <div class="alphabet-group">
-                                        <p class="link">Горно-Алтайск</p>
+                                        <a href="#" class="link">Горно-Алтайск</a>
                                     </div>
                                     <div class="alphabet-group">
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
-                                        <p class="link">Брянск</p>
-                                        <p class="link">Благовещенск</p>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Брянск</a>
+                                        <a href="#" class="link">Благовещенск</a>
                                     </div>
                                     <div class="alphabet-group">
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
                                     </div>
                                     <div class="alphabet-group">
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
                                     </div>
                                     <div class="alphabet-group">
-                                        <p class="link">Барнаул</p>
-                                        <p class="link">Белгород</p>
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
-                                    </div>
-                                    <div class="alphabet-group">
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Благовещенск</p>
-                                    </div>
-                                    <div class="alphabet-group">
-                                        <p class="link">Биробиджан</p>
-                                        <p class="link">Выхухоль</p>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Выхухоль</a>
                                     </div>
                                 </div>
                             </div>
