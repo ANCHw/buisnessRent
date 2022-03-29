@@ -1012,7 +1012,7 @@
             <div class="container no-sm-paddings">
                 <div class="board__wrapper">
 
-                    <button class=" board__close no-btn js-close-popup">
+                    <button class=" board__close no-btn js-close-popup" id="mobileMenuClose">
                         <svg>
                             <use xlink:href="src/img/sprite.svg#cross"></use>
                         </svg>
@@ -1031,7 +1031,7 @@
                             </div>
                             <div class="col-12">
                                 <ul class="mobile-menu__list">
-                                    <li class="mobile-menu__link-block">
+                                    <li class="mobile-menu__link-block" data-target="#mobileRent">
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#key"></use>
                                         </svg>
@@ -1039,56 +1039,14 @@
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#chevron-right"></use>
                                         </svg>
-
-                                        <ul class="mobile-menu__sublist">
-                                            <li>
-                                                <p class="link">Торговая недвижимость</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Офисная недвижимость</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Промышленная недвижимость</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Складские помещения</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Недвижимость в сфере услуг</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Земельные участки</p>
-                                            </li>
-                                        </ul>
                                     </li>
-                                    <li class="mobile-menu__link-block">
+                                    <li class="mobile-menu__link-block" data-target="#mobileSale">
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#buisness"></use>
                                         </svg>                                        <p class="link">Продажа недвижимости</p>
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#chevron-right"></use>
                                         </svg>
-
-                                        <ul class="mobile-menu__sublist">
-                                            <li>
-                                                <p class="link">Торговая недвижимость</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Офисная недвижимость</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Промышленная недвижимость</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Складские помещения</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Недвижимость в сфере услуг</p>
-                                            </li>
-                                            <li>
-                                                <p class="link">Земельные участки</p>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="mobile-menu__link-block">
                                         <svg class="icon icon-big">
@@ -1121,6 +1079,57 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mobile-menu__sublist container" id="mobileRent">
+                        <ul class="">
+                            <li>
+                                <p class="link">Торговая недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Офисная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Промышленная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Складские помещения</p>
+                            </li>
+                            <li>
+                                <p class="link">Недвижимость в сфере услуг</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu__sublist container" id="mobileSale">
+                        <ul class="">
+                            <li>
+                                <p class="link">Торговая недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Офисная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Промышленная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Складские помещения</p>
+                            </li>
+                            <li>
+                                <p class="link">Недвижимость в сфере услуг</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
                     <div class="divider"></div>
 
                     <div class="container">

@@ -96,6 +96,7 @@ $(document).ready( function() {
     
         function stopPropagation(e){
             e.stopPropagation()
+            console.log('stop');
         }
     })()
 
@@ -141,20 +142,29 @@ $(document).ready( function() {
     }
     jsMenu()
 
-    const mobileSubMenu = document.querySelector('.mobile-menu__sublist')
+    // const mobileSubMenu = document.querySelector('.mobile-menu__sublist')
 
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link-block')
-    mobileMenuLinks.forEach(item=>{
-        item.addEventListener('click', showSubMenu)
+    // const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link-block')
+    // mobileMenuLinks.forEach(item=>{
+    //     item.addEventListener('click', showSubMenu)
+    // })
+
+    // function showSubMenu(){
+    //     mobileSubMenu.classList.add('active')
+    // }
+
+    // function hideSubMenu(){
+    //     mobileSubMenu.classList.remove('active')
+    // }
+
+    $('.mobile-menu__link-block').click( function () {
+        let target = $(this).data('target')
+        $(target).addClass('active')
     })
 
-    function showSubMenu(){
-        mobileSubMenu.classList.add('active')
-    }
-
-    function hideSubMenu(){
-        mobileSubMenu.classList.remove('active')
-    }
+    $('#mobileMenuClose').click( function() {
+        $('.mobile-menu__sublist').removeClass('active')
+    })
 
     // mobile menu
 });

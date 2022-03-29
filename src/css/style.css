@@ -1521,8 +1521,16 @@ input[type='checkbox'] {
     position: absolute;
     top: 0;
     background-color: white;
-    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding-top: 24px;
+    border-radius: 12px 12px 0px 0px;
     display: none;
+}
+
+.mobile-menu__sublist li {
+    margin-bottom: 16px;
 }
 
 .mobile-menu__sublist.active{
