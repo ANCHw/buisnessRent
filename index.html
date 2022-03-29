@@ -29,7 +29,8 @@
                     <div class="header__logo">
                         <img src="/src/img/logo.svg" alt="">
                     </div>
-                    <a href="#" id="js-open-popup" class="link header__location js-open-popup d-none d-xl-flex align-items-center">
+                    <a href="#" id="js-open-popup"
+                        class="link header__location js-open-popup d-none d-xl-flex align-items-center">
                         <svg class="icon">
                             <use xlink:href="src/img/sprite.svg#location"></use>
                         </svg>
@@ -66,7 +67,7 @@
                             <use xlink:href="src/img/sprite.svg#burger"></use>
                         </svg>
                     </div>
-    
+
                     <a href="#" class="mobile__location js-open-popup"><span>Петрозаводск</span></a>
                 </div>
 
@@ -106,7 +107,7 @@
                     <div class="filter__tab-content tab-content" data-group="filter" id="filterRent">
                         <form>
                             <div class="form-control dropdown-control select">
-                                <label >Вид объекта</label>
+                                <label>Вид объекта</label>
                                 <input id="object" type="text">
                                 <div class="dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -151,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control square">
-                                <label >Площадь</label>
+                                <label>Площадь</label>
                                 <input id="square" type="text">
                                 <div class="dropdown square__dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -179,7 +180,7 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control price">
-                                <label >Цена</label>
+                                <label>Цена</label>
                                 <input id="price" type="text">
                                 <div class="dropdown price__dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -215,7 +216,7 @@
                     <div class="filter__tab-content tab-content d-none" data-group="filter" id="filterSale">
                         <form>
                             <div class="form-control dropdown-control select">
-                                <label >Вид объекта</label>
+                                <label>Вид объекта</label>
                                 <input id="objectSale" type="text">
                                 <div class="dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -260,7 +261,7 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control square">
-                                <label >Площадь</label>
+                                <label>Площадь</label>
                                 <input id="squareSale" type="text">
                                 <div class="dropdown square__dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -293,7 +294,7 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control price">
-                                <label >Цена</label>
+                                <label>Цена</label>
                                 <input id="priceSale" type="text">
                                 <div class="dropdown price__dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -699,7 +700,8 @@
                         <div class="space-card__img" style="background-image: url(src/img/space1.jpg);"></div>
                         <div class="space-card__info d-flex">
                             <div class="info__left">
-                                <div class="space-card__title">Свободного назначения бла бла бла длинное название, 82.2 м²</div>
+                                <div class="space-card__title">Свободного назначения бла бла бла длинное название, 82.2
+                                    м²</div>
                                 <div class="space-card__price">199 320 000 ₽/мес</div>
                                 <div class="space-card__params">
                                     <span>15 166 ₽/м²</span>
@@ -1019,7 +1021,6 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="board__top-wrap d-flex align-items-center justify-content-between">
-                                    <h2 class="board__title">Выберите город</h2>
                                     <button class="board__btn btn btn-trp btn--little js-close-popup">
                                         <svg>
                                             <use xlink:href="src/img/sprite.svg#cross-blue"></use>
@@ -1031,20 +1032,14 @@
                             <div class="col-12">
                                 <ul class="mobile-menu__list">
                                     <li class="mobile-menu__link-block">
-                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#key"></use>
+                                        </svg>
                                         <p class="link">Аренда недвижимости</p>
-                                        <img src="./src//img//svg/arrow.svg" alt="svg">
-                                    </li>
-                                    <li class="mobile-menu__link-block">
-                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
-                                        <p class="link">Аренда недвижимости</p>
-                                        <img src="./src//img//svg/arrow.svg" alt="svg">
-                                    </li>
-                                    <li class="mobile-menu__link-block">
-                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
-                                        <p class="link">Аренда недвижимости</p>
-                                        <img src="./src//img//svg/arrow.svg" alt="svg">
-                                        
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+
                                         <ul class="mobile-menu__sublist">
                                             <li>
                                                 <p class="link">Торговая недвижимость</p>
@@ -1067,22 +1062,89 @@
                                         </ul>
                                     </li>
                                     <li class="mobile-menu__link-block">
-                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
-                                        <p class="link">Аренда недвижимости</p>
-                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#buisness"></use>
+                                        </svg>                                        <p class="link">Продажа недвижимости</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+
+                                        <ul class="mobile-menu__sublist">
+                                            <li>
+                                                <p class="link">Торговая недвижимость</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Офисная недвижимость</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Промышленная недвижимость</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Складские помещения</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Недвижимость в сфере услуг</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Земельные участки</p>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="mobile-menu__link-block">
-                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
-                                        <p class="link">Аренда недвижимости</p>
-                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#briefcase"></use>
+                                        </svg>                                        
+                                        <p class="link">Каталог организаций</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#support"></use>
+                                        </svg>                                        
+                                        <p class="link">Консультация юриста</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#book"></use>
+                                        </svg>
+                                        <p class="link">Статьи и материалы</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="divider"></div>
 
-                    <div class="container" style="overflow: auto;">
-                        
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                <a href="#" class="btn btn-fill">
+                                    Войти в личный кабинет
+                                </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-between">
+                                <a href="#" class="link header__action active d-flex align-items-center">
+                                    <svg class="icon icon-big heart">
+                                        <use xlink:href="src/img/sprite.svg#heart"></use>
+                                    </svg>
+                                    <span class="action__counter">23</span>
+                                </a>
+                                <a href="#" class="link header__action d-flex align-items-center">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#rate"></use>
+                                    </svg>
+                                    <span class="action__counter">23</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
