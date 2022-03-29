@@ -16,6 +16,7 @@ $(document).ready( function() {
     });
 
     //dropdown
+   if ($(window).width() > 767.9) {
     $('.dropdown-control').click( function(){
         $(this).addClass('active');
         $(this).children('.dropdown').show();
@@ -31,6 +32,7 @@ $(document).ready( function() {
         div.parent().removeClass('active');
 	});
 
+   }
     //clear
     $('.filter__clear').click( function() {
 
@@ -50,17 +52,7 @@ $(document).ready( function() {
           });
     }
     
-
-    //
-    // $(document).mouseup( function(e){ 
-	// 	let div = $('.modal'); 
-	// 	if ( !div.is(e.target) 
-	// 	    && div.has(e.target).length === 0 ) { 
-	// 		div.hide(); 
-	// 	}
-	// });
-
-    // 
+    // cities
     (function(){
         const modalParent = document.querySelector('#js-board')
     
@@ -100,9 +92,9 @@ $(document).ready( function() {
         }
     })()
 
+
     // mobile menu
     
-
     function jsMenu(){
         const modalParent = document.querySelector('#js-mobile-menu')
     
@@ -167,4 +159,54 @@ $(document).ready( function() {
     })
 
     // mobile menu
+
+
+    // mobile filter
+    if ($(window).width() < 768) {
+        function jsFilter(){
+            const modalParent = document.querySelector('#js-filter')
+        
+            const modalBack = modalParent.querySelector('.board__background')
+            const modalChild = modalParent.querySelector('.board__wrapper')
+        
+            const openModalBtn = document.querySelectorAll('.dropdown-control')
+            const closeModalBtn = modalParent.querySelectorAll('.js-close-popup')
+        
+            const body = document.querySelector('body')
+            const filterItems = document.querySelectorAll('.mobile-filter__item')
+        
+            modalBack.addEventListener('click', closeModal)
+        
+            openModalBtn.forEach(el => {
+                el.addEventListener('click', openModal)
+            })
+        
+            closeModalBtn.forEach(el => {
+                el.addEventListener('click', closeModal)
+            })
+        
+            modalChild.addEventListener('click', stopPropagation)
+        
+            function closeModal(){
+                modalParent.classList.remove('active')
+                body.style.overflow = 'auto'
+                filterItems.forEach(el => {
+                    el.classList.remove('active')
+                })
+            }
+        
+            function openModal(){
+                modalParent.classList.add('active')
+                body.style.overflow = 'hidden'
+                const target = document.querySelector(this.dataset.target)
+                target.classList.add('active')
+            }
+        
+            function stopPropagation(e){
+                e.stopPropagation()
+            }
+        }
+        jsFilter()
+     
+    }
 });

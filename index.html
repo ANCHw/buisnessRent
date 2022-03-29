@@ -106,7 +106,7 @@
                 <div class="filter__body">
                     <div class="filter__tab-content tab-content" data-group="filter" id="filterRent">
                         <form>
-                            <div class="form-control dropdown-control select">
+                            <div class="form-control dropdown-control select" data-target="#filterObject">
                                 <label>Вид объекта</label>
                                 <input id="object" type="text">
                                 <div class="dropdown">
@@ -151,7 +151,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="form-control dropdown-control square">
+                            <div class="form-control dropdown-control square" data-target="#filterSquare">
                                 <label>Площадь</label>
                                 <input id="square" type="text">
                                 <div class="dropdown square__dropdown">
@@ -179,7 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-control dropdown-control price">
+                            <div class="form-control dropdown-control price" data-target="#filterPrice">
                                 <label>Цена</label>
                                 <input id="price" type="text">
                                 <div class="dropdown price__dropdown">
@@ -215,7 +215,7 @@
                     </div>
                     <div class="filter__tab-content tab-content d-none" data-group="filter" id="filterSale">
                         <form>
-                            <div class="form-control dropdown-control select">
+                            <div class="form-control dropdown-control select" data-target="#filterObject">
                                 <label>Вид объекта</label>
                                 <input id="objectSale" type="text">
                                 <div class="dropdown">
@@ -260,68 +260,58 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="form-control dropdown-control square">
+                            <div class="form-control dropdown-control square" data-target="#filterSquare">
                                 <label>Площадь</label>
                                 <input id="squareSale" type="text">
                                 <div class="dropdown square__dropdown">
                                     <div class="filter__clear">сбросить</div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="form-control dropdown-control square mr-6px">
-                                            <label for="square1Sale">от</label>
-                                            <input id="square1Sale" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 м²</li>
-                                                    <li>70 м²</li>
-                                                    <li>90 м²</li>
-                                                    <li>100 м²</li>
-                                                </ul>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control square">
+                                                <label for="squareSale1">от</label>
+                                                <input id="squareSale1" type="text">
                                             </div>
                                         </div>
-                                        <div class="form-control dropdown-control square">
-                                            <label for="square2Sale">до</label>
-                                            <input id="square2Sale" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 м²</li>
-                                                    <li>70 м²</li>
-                                                    <li>90 м²</li>
-                                                    <li>100 м²</li>
-                                                </ul>
+                                        <div class="dropdown__item">
+                                            <div class="form-control dropdown-control square">
+                                                <label for="squareSale2">до</label>
+                                                <input id="squareSale2" type="text">
                                             </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 м²</li>
+                                                <li>70 м²</li>
+                                                <li>90 м²</li>
+                                                <li>100 м²</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-control dropdown-control price">
+                            <div class="form-control dropdown-control price" data-target="#filterPrice">
                                 <label>Цена</label>
                                 <input id="priceSale" type="text">
                                 <div class="dropdown price__dropdown">
                                     <div class="filter__clear">сбросить</div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="form-control dropdown-control square mr-6px">
-                                            <label for="price1Sale">от</label>
-                                            <input id="price1Sale" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 тыс ₽</li>
-                                                    <li>70 тыс ₽</li>
-                                                    <li>90 тыс ₽</li>
-                                                    <li>100 тыс ₽</li>
-                                                </ul>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control price mr-6px">
+                                                <label for="priceSale1">от</label>
+                                                <input id="priceSale1" type="text">
                                             </div>
                                         </div>
-                                        <div class="form-control dropdown-control square">
-                                            <label for="price2Sale">до</label>
-                                            <input id="price2Sale" type="text">
-                                            <div class="dropdown p-0">
-                                                <ul class="dropdown__list">
-                                                    <li>50 тыс ₽</li>
-                                                    <li>70 тыс ₽</li>
-                                                    <li>90 тыс ₽</li>
-                                                    <li>100 тыс ₽</li>
-                                                </ul>
+                                        <div class="dropdown__item">
+                                            <div class="form-control price">
+                                                <label for="priceSale2">до</label>
+                                                <input id="priceSale2" type="text">
                                             </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 ₽</li>
+                                                <li>70 ₽</li>
+                                                <li>90 ₽</li>
+                                                <li>100 ₽</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -1228,6 +1218,118 @@
             </div>
         </div>
     </div>
+
+    <div id="js-filter" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup" id="mobileMenuClose">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container mobile-filter">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile-filter__item" id="filterObject">
+                                    <div class="filter__clear">сбросить</div>
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <input type="checkbox" id="filterObject1Sale" value="1">
+                                            <label for="filterObject1Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filterObject2Sale" value="2">
+                                            <label for="filterObject2Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filterObject3Sale" value="3">
+                                            <label for="filterObject3Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mobile-filter__item" id="filterSquare">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control square">
+                                                <label for="filterSquare1">от</label>
+                                                <input id="filterSquaree1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control dropdown-control square">
+                                                <label for="filterSquare2">до</label>
+                                                <input id="filterSquare2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 м²</li>
+                                                <li>70 м²</li>
+                                                <li>90 м²</li>
+                                                <li>100 м²</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile-filter__item" id="filterPrice">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control price mr-6px">
+                                                <label for="filterPrice1">от</label>
+                                                <input id="filterPrice1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control price">
+                                                <label for="filterPrice2">до</label>
+                                                <input id="filterPrice2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 ₽</li>
+                                                <li>70 ₽</li>
+                                                <li>90 ₽</li>
+                                                <li>100 ₽</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="js-board" class="board">
         <div class="board__background">
 
