@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -25,11 +25,11 @@
     <header class="header">
         <div class="container">
             <div class="header__top row align-items-center justify-content-between">
-                <div class="col-lg-4 d-flex">
+                <div class="col-6 col-lg-4 d-flex">
                     <div class="header__logo">
                         <img src="/src/img/logo.svg" alt="">
                     </div>
-                    <a href="#" id="js-open-popup" class="link header__location d-flex align-items-center">
+                    <a href="#" id="js-open-popup" class="link header__location js-open-popup d-none d-xl-flex align-items-center">
                         <svg class="icon">
                             <use xlink:href="src/img/sprite.svg#location"></use>
                         </svg>
@@ -37,8 +37,8 @@
                     </a>
                 </div>
 
-                <div class="col-lg-3 d-flex justify-content-between">
-                    <a href="#" class="link header__login d-flex align-items-center">
+                <div class="col-6 col-lg-3 d-flex justify-content-end justify-content-xl-between">
+                    <a href="#" class="link header__login d-none d-xl-flex align-items-center">
                         <svg class="icon">
                             <use xlink:href="src/img/sprite.svg#user"></use>
                         </svg>
@@ -60,20 +60,30 @@
                     </nav>
                 </div>
 
-                <div class="col-lg-3 d-flex justify-content-between">
+                <div class="col-8 col-md-7 col-lg-8 d-flex d-xl-none align-items-center">
+                    <div class="burger d-flex align-items-center js-burger">
+                        <svg class="icon icon-big">
+                            <use xlink:href="src/img/sprite.svg#burger"></use>
+                        </svg>
+                    </div>
+    
+                    <a href="#" class="mobile__location js-open-popup"><span>Петрозаводск</span></a>
+                </div>
+
+                <div class="col-4 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-between">
                     <a href="#" class="link header__action active d-flex align-items-center">
                         <svg class="icon icon-big heart">
                             <use xlink:href="src/img/sprite.svg#heart"></use>
                         </svg>
                         <span class="action__counter">23</span>
-                        <span>Избранное</span>
+                        <span class="d-none d-md-inline-block">Избранное</span>
                     </a>
                     <a href="#" class="link header__action d-flex align-items-center">
                         <svg class="icon icon-big">
                             <use xlink:href="src/img/sprite.svg#rate"></use>
                         </svg>
                         <span class="action__counter">23</span>
-                        <span>Сравнение</span>
+                        <span class="d-none d-md-inline-block">Сравнение</span>
                     </a>
                 </div>
             </div>
@@ -94,9 +104,9 @@
                 </div>
                 <div class="filter__body">
                     <div class="filter__tab-content tab-content" data-group="filter" id="filterRent">
-                        <form action="">
+                        <form>
                             <div class="form-control dropdown-control select">
-                                <label for="">Вид объекта</label>
+                                <label >Вид объекта</label>
                                 <input id="object" type="text">
                                 <div class="dropdown">
                                     <div class="filter__clear">сбросить</div>
@@ -141,10 +151,10 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control square">
-                                <label for="">Площадь</label>
+                                <label >Площадь</label>
                                 <input id="square" type="text">
                                 <div class="dropdown square__dropdown">
-                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="filter__clear">сбросить</div>
                                     <div class="dropdown__inner">
                                         <div class="dropdown__item mr-6px">
                                             <div class="form-control square">
@@ -169,10 +179,10 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control price">
-                                <label for="">Цена</label>
+                                <label >Цена</label>
                                 <input id="price" type="text">
                                 <div class="dropdown price__dropdown">
-                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="filter__clear">сбросить</div>
                                     <div class="dropdown__inner">
                                         <div class="dropdown__item mr-6px">
                                             <div class="form-control price mr-6px">
@@ -203,16 +213,16 @@
                         </form>
                     </div>
                     <div class="filter__tab-content tab-content d-none" data-group="filter" id="filterSale">
-                        <form action="">
+                        <form>
                             <div class="form-control dropdown-control select">
-                                <label for="">Вид объекта</label>
-                                <input id="object" type="text">
+                                <label >Вид объекта</label>
+                                <input id="objectSale" type="text">
                                 <div class="dropdown">
                                     <div class="filter__clear">сбросить</div>
                                     <ul class="dropdown__list">
                                         <li>
-                                            <input type="checkbox" id="object1" value="1">
-                                            <label for="object1" class="custom-checkbox">
+                                            <input type="checkbox" id="object1Sale" value="1">
+                                            <label for="object1Sale" class="custom-checkbox">
                                                 <svg class="icon icon-big checkbox">
                                                     <use xlink:href="src/img/sprite.svg#checkbox"></use>
                                                 </svg>
@@ -223,8 +233,8 @@
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="object2" value="2">
-                                            <label for="object2" class="custom-checkbox">
+                                            <input type="checkbox" id="object2Sale" value="2">
+                                            <label for="object2Sale" class="custom-checkbox">
                                                 <svg class="icon icon-big checkbox">
                                                     <use xlink:href="src/img/sprite.svg#checkbox"></use>
                                                 </svg>
@@ -235,8 +245,8 @@
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="object3" value="3">
-                                            <label for="object3" class="custom-checkbox">
+                                            <input type="checkbox" id="object3Sale" value="3">
+                                            <label for="object3Sale" class="custom-checkbox">
                                                 <svg class="icon icon-big checkbox">
                                                     <use xlink:href="src/img/sprite.svg#checkbox"></use>
                                                 </svg>
@@ -250,14 +260,14 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control square">
-                                <label for="">Площадь</label>
-                                <input id="square" type="text">
+                                <label >Площадь</label>
+                                <input id="squareSale" type="text">
                                 <div class="dropdown square__dropdown">
-                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="filter__clear">сбросить</div>
                                     <div class="d-flex justify-content-between">
                                         <div class="form-control dropdown-control square mr-6px">
-                                            <label for="square1">от</label>
-                                            <input id="square1" type="text">
+                                            <label for="square1Sale">от</label>
+                                            <input id="square1Sale" type="text">
                                             <div class="dropdown p-0">
                                                 <ul class="dropdown__list">
                                                     <li>50 м²</li>
@@ -268,8 +278,8 @@
                                             </div>
                                         </div>
                                         <div class="form-control dropdown-control square">
-                                            <label for="square2">до</label>
-                                            <input id="square2" type="text">
+                                            <label for="square2Sale">до</label>
+                                            <input id="square2Sale" type="text">
                                             <div class="dropdown p-0">
                                                 <ul class="dropdown__list">
                                                     <li>50 м²</li>
@@ -283,14 +293,14 @@
                                 </div>
                             </div>
                             <div class="form-control dropdown-control price">
-                                <label for="">Цена</label>
-                                <input id="price" type="text">
+                                <label >Цена</label>
+                                <input id="priceSale" type="text">
                                 <div class="dropdown price__dropdown">
-                                    <div class="filter__clear" id="filterClear">сбросить</div>
+                                    <div class="filter__clear">сбросить</div>
                                     <div class="d-flex justify-content-between">
                                         <div class="form-control dropdown-control square mr-6px">
-                                            <label for="price1">от</label>
-                                            <input id="price1" type="text">
+                                            <label for="price1Sale">от</label>
+                                            <input id="price1Sale" type="text">
                                             <div class="dropdown p-0">
                                                 <ul class="dropdown__list">
                                                     <li>50 тыс ₽</li>
@@ -301,8 +311,8 @@
                                             </div>
                                         </div>
                                         <div class="form-control dropdown-control square">
-                                            <label for="price2">до</label>
-                                            <input id="price2" type="text">
+                                            <label for="price2Sale">до</label>
+                                            <input id="price2Sale" type="text">
                                             <div class="dropdown p-0">
                                                 <ul class="dropdown__list">
                                                     <li>50 тыс ₽</li>
@@ -511,7 +521,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
     <section class="find-space">
         <div class="container">
@@ -531,32 +540,34 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <ul class="list-no-marker sublist">
-                                        <li>
-                                            <a href="#" class="link d-flex align-items-center">
-                                                Торговые центры
-                                                <div class="find-space__counter">
-                                                    234
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="link d-flex align-items-center">
-                                                Магазины
-                                                <div class="find-space__counter">
-                                                    234
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="link d-flex align-items-center">
-                                                Другие помещения
-                                                <div class="find-space__counter">
-                                                    234
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <li>
+                                        <ul class="list-no-marker sublist">
+                                            <li>
+                                                <a href="#" class="link d-flex align-items-center">
+                                                    Торговые центры
+                                                    <div class="find-space__counter">
+                                                        234
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="link d-flex align-items-center">
+                                                    Магазины
+                                                    <div class="find-space__counter">
+                                                        234
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="link d-flex align-items-center">
+                                                    Другие помещения
+                                                    <div class="find-space__counter">
+                                                        234
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         <a href="#" class="link d-flex align-items-center">
                                             Офисная недвижимость
@@ -673,11 +684,11 @@
         </div>
     </section>
 
-    <section class="advertisment">
+    <div class="advertisment">
         <div class="container text-center">
             <img src="/src/img/adv-img1.jpg" alt="">
         </div>
-    </section>
+    </div>
 
     <section class="rent">
         <div class="container">
@@ -777,11 +788,11 @@
         </div>
     </section>
 
-    <section class="advertisment">
+    <div class="advertisment">
         <div class="container text-center">
             <img src="/src/img/adv-img2.jpg" alt="">
         </div>
-    </section>
+    </div>
 
     <section class="sale">
         <div class="container">
@@ -881,11 +892,11 @@
         </div>
     </section>
 
-    <section class="advertisment">
+    <div class="advertisment">
         <div class="container text-center">
             <img src="/src/img/adv-img3.jpg" alt="">
         </div>
-    </section>
+    </div>
 
     <section class="materials">
         <div class="container">
@@ -993,6 +1004,90 @@
     </footer>
 
 
+    <div id="js-mobile-menu" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="board__top-wrap d-flex align-items-center justify-content-between">
+                                    <h2 class="board__title">Выберите город</h2>
+                                    <button class="board__btn btn btn-trp btn--little js-close-popup">
+                                        <svg>
+                                            <use xlink:href="src/img/sprite.svg#cross-blue"></use>
+                                        </svg>
+                                        Закрыть
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__link-block">
+                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
+                                        <p class="link">Аренда недвижимости</p>
+                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
+                                        <p class="link">Аренда недвижимости</p>
+                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
+                                        <p class="link">Аренда недвижимости</p>
+                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                        
+                                        <ul class="mobile-menu__sublist">
+                                            <li>
+                                                <p class="link">Торговая недвижимость</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Офисная недвижимость</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Промышленная недвижимость</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Складские помещения</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Недвижимость в сфере услуг</p>
+                                            </li>
+                                            <li>
+                                                <p class="link">Земельные участки</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
+                                        <p class="link">Аренда недвижимости</p>
+                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <img src="./src/img/svg/mm-key.svg" alt="svg">
+                                        <p class="link">Аренда недвижимости</p>
+                                        <img src="./src//img//svg/arrow.svg" alt="svg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="overflow: auto;">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="js-board" class="board">
         <div class="board__background">
 

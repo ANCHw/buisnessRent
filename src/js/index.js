@@ -60,32 +60,101 @@ $(document).ready( function() {
 	// 	}
 	// });
 
-    // popup
-    const modalParent = document.querySelector('#js-board')
+    // 
+    (function(){
+        const modalParent = document.querySelector('#js-board')
+    
+        const modalBack = modalParent.querySelector('.board__background')
+        const modalChild = modalParent.querySelector('.board__wrapper')
+    
+        const openModalBtn = document.querySelectorAll('.js-open-popup')
+        const closeModalBtn = modalParent.querySelectorAll('.js-close-popup')
+    
+        const body = document.querySelector('body')
+    
+        modalBack.addEventListener('click', closeModal)
+    
+        openModalBtn.forEach(el => {
+            el.addEventListener('click', openModal)
+        })
+    
+        closeModalBtn.forEach(el => {
+            el.addEventListener('click', closeModal)
+        })
+    
+        modalChild.addEventListener('click', stopPropagation)
+    
+        function closeModal(){
+            modalParent.classList.remove('active')
+            body.style.overflow = 'auto'
+        }
+    
+        function openModal(){
+            modalParent.classList.add('active')
+            body.style.overflow = 'hidden'
+        }
+    
+        function stopPropagation(e){
+            e.stopPropagation()
+        }
+    })()
 
-    const modalBack = document.querySelector('.board__background')
-    const modalChild = document.querySelector('.board__wrapper')
+    // mobile menu
+    
 
-    const openModalBtn = document.querySelector('#js-open-popup')
-    const closeModalBtn = document.querySelectorAll('.js-close-popup')
+    function jsMenu(){
+        const modalParent = document.querySelector('#js-mobile-menu')
+    
+        const modalBack = modalParent.querySelector('.board__background')
+        const modalChild = modalParent.querySelector('.board__wrapper')
+    
+        const openModalBtn = document.querySelectorAll('.js-burger')
+        const closeModalBtn = modalParent.querySelectorAll('.js-close-popup')
+    
+        const body = document.querySelector('body')
+    
+        modalBack.addEventListener('click', closeModal)
+    
+        openModalBtn.forEach(el => {
+            el.addEventListener('click', openModal)
+        })
+    
+        closeModalBtn.forEach(el => {
+            el.addEventListener('click', closeModal)
+        })
+    
+        modalChild.addEventListener('click', stopPropagation)
+    
+        function closeModal(){
+            modalParent.classList.remove('active')
+            body.style.overflow = 'auto'
+        }
+    
+        function openModal(){
+            modalParent.classList.add('active')
+            body.style.overflow = 'hidden'
+        }
+    
+        function stopPropagation(e){
+            e.stopPropagation()
+        }
+    }
+    jsMenu()
 
-    openModalBtn.addEventListener('click', openModal)
-    modalBack.addEventListener('click', closeModal)
+    const mobileSubMenu = document.querySelector('.mobile-menu__sublist')
 
-    closeModalBtn.forEach(el => {
-        el.addEventListener('click', closeModal)
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link-block')
+    mobileMenuLinks.forEach(item=>{
+        item.addEventListener('click', showSubMenu)
     })
-    modalChild.addEventListener('click', stopPropagation)
 
-    function closeModal(){
-        modalParent.classList.remove('active')
+    function showSubMenu(){
+        mobileSubMenu.classList.add('active')
     }
 
-    function openModal(){
-        modalParent.classList.add('active')
+    function hideSubMenu(){
+        mobileSubMenu.classList.remove('active')
     }
 
-    function stopPropagation(e){
-        e.stopPropagation()
-    }
+    // mobile menu
 });
