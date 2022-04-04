@@ -465,7 +465,7 @@ input[type='checkbox'] {
     padding: 16px 12px;
 }
 
-.filter__tab-content form {
+.filter__tab-content {
     display: flex;
     justify-content: space-between;
 }
@@ -1263,7 +1263,7 @@ input[type='checkbox'] {
 /* mobile menu */
 
 @media (max-width: 1199.9px) {
-    .filter__tab-content form {
+    .filter__tab-content {
         flex-wrap: wrap;
     }
 

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БизнесАренда</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="src/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/src/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+</head>
+<body>
+    
+    <div id="js-mobile-menu" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup" id="mobileMenuClose">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="board__top-wrap d-flex align-items-center justify-content-end">
+                                    <button class="board__btn btn btn-trp btn--little js-close-popup">
+                                        <svg>
+                                            <use xlink:href="src/img/sprite.svg#cross-blue"></use>
+                                        </svg>
+                                        Закрыть
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__link-block" data-target="#mobileRent">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#key"></use>
+                                        </svg>
+                                        <p class="link">Аренда недвижимости</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="mobile-menu__link-block" data-target="#mobileSale">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#buisness"></use>
+                                        </svg>
+                                        <p class="link">Продажа недвижимости</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#briefcase"></use>
+                                        </svg>
+                                        <p class="link">Каталог организаций</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#support"></use>
+                                        </svg>
+                                        <p class="link">Консультация юриста</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#book"></use>
+                                        </svg>
+                                        <p class="link">Статьи и материалы</p>
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chevron-right"></use>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__sublist container" id="mobileRent">
+                        <ul class="">
+                            <li>
+                                <p class="link">Торговая недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Офисная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Промышленная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Складские помещения</p>
+                            </li>
+                            <li>
+                                <p class="link">Недвижимость в сфере услуг</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu__sublist container" id="mobileSale">
+                        <ul class="">
+                            <li>
+                                <p class="link">Торговая недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Офисная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Промышленная недвижимость</p>
+                            </li>
+                            <li>
+                                <p class="link">Складские помещения</p>
+                            </li>
+                            <li>
+                                <p class="link">Недвижимость в сфере услуг</p>
+                            </li>
+                            <li>
+                                <p class="link">Земельные участки</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="container mobile-menu__user-menu" style="">
+                        <!-- non authorized -->
+                        <!-- <div class="row">
+                            <div class="col-8">
+                                <a href="#" class="btn btn-fill">
+                                    Войти в личный кабинет
+                                </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-between">
+                                <a href="#" class="link header__action active d-flex align-items-center">
+                                    <svg class="icon icon-big heart">
+                                        <use xlink:href="src/img/sprite.svg#heart"></use>
+                                    </svg>
+                                    <span class="action__counter">23</span>
+                                </a>
+                                <a href="#" class="link header__action d-flex align-items-center">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#rate"></use>
+                                    </svg>
+                                    <span class="action__counter">23</span>
+                                </a>
+                            </div>
+                        </div> -->
+
+                        <div class="row mb-20px">
+                            <div class="col-8 col-sm-9 col-md-10">
+                                <a href="#" class="mobile-menu__user">
+                                    <span>Илья</span>
+                                    <svg class="icon ">
+                                        <use xlink:href="src/img/sprite.svg#settings"></use>
+                                    </svg>
+                                </a>
+                                <p>asd.popito@yandex.ru</p>
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-between">
+                                <a href="#" class="link header__action active d-flex">
+                                    <svg class="icon icon-big heart">
+                                        <use xlink:href="src/img/sprite.svg#heart"></use>
+                                    </svg>
+                                    <span class="action__counter">23</span>
+                                </a>
+                                <a href="#" class="link header__action d-flex">
+                                    <svg class="icon icon-big">
+                                        <use xlink:href="src/img/sprite.svg#rate"></use>
+                                    </svg>
+                                    <span class="action__counter">23</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#collection"></use>
+                                        </svg>
+                                        <p class="link">Мои объявления</p>
+                                        <div class="mobile-menu__counter">
+                                            <span>34</span>
+                                        </div>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#chat"></use>
+                                        </svg>
+                                        <p class="link">Сообщения</p>
+                                        <div class="mobile-menu__counter">
+                                            <span>34</span>
+                                        </div>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#spreadsheet"></use>
+                                        </svg>
+                                        <p class="link">XML выгрузка</p>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#dollar"></use>
+                                        </svg>
+                                        <p class="link">Баланс: 240 ₽</p>
+                                    </li>
+                                    <li class="mobile-menu__link-block">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#discount"></use>
+                                        </svg>
+                                        <p class="link">Промокоды</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="js-filter" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup" id="mobileMenuClose">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container mobile-filter">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile-filter__item" id="filterObject">
+                                    <div class="filter__clear">сбросить</div>
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <input type="checkbox" id="filterObject1Sale" value="1">
+                                            <label for="filterObject1Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filterObject2Sale" value="2">
+                                            <label for="filterObject2Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filterObject3Sale" value="3">
+                                            <label for="filterObject3Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mobile-filter__item" id="filterSquare">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control square">
+                                                <label for="filterSquare1">от</label>
+                                                <input id="filterSquaree1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control dropdown-control square">
+                                                <label for="filterSquare2">до</label>
+                                                <input id="filterSquare2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 м²</li>
+                                                <li>70 м²</li>
+                                                <li>90 м²</li>
+                                                <li>100 м²</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile-filter__item" id="filterPrice">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control price mr-6px">
+                                                <label for="filterPrice1">от</label>
+                                                <input id="filterPrice1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control price">
+                                                <label for="filterPrice2">до</label>
+                                                <input id="filterPrice2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 ₽</li>
+                                                <li>70 ₽</li>
+                                                <li>90 ₽</li>
+                                                <li>100 ₽</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="js-board" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="board__top-wrap d-flex align-items-center justify-content-between">
+                                    <h2 class="board__title">Выберите город</h2>
+                                    <button class="board__btn btn btn-trp btn--little js-close-popup">
+                                        <svg>
+                                            <use xlink:href="src/img/sprite.svg#cross-blue"></use>
+                                        </svg>
+                                        Закрыть
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input class="board__input" placeholder="Начните вводить название города" type="text">
+                            </div>
+                            <div class="col-12">
+                                <div class="board__most-cities-wrap d-flex">
+                                    <p class="link">Москва</p>
+                                    <p class="link">Санкт-Петербург</p>
+                                    <p class="link">Краснодар</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="overflow: auto;">
+                        <div class="row">
+                            <div class="col-12 board__overflow">
+                                <div class="board__cols">
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Абакан</a>
+                                        <a href="#" class="link">Анадырь</a>
+                                        <a href="#" class="link">Архангельск</a>
+                                        <a href="#" class="link">Астрахань</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Брянск</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Горно-Алтайск</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Брянск</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                        <a href="#" class="link">Барнаул</a>
+                                        <a href="#" class="link">Белгород</a>
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Благовещенск</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Биробиджан</a>
+                                        <a href="#" class="link">Выхухоль</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Абакан</a>
+                                        <a href="#" class="link">Анадырь</a>
+                                        <a href="#" class="link">Архангельск</a>
+                                        <a href="#" class="link">Астрахань</a>
+                                    </div>
+                                    <div class="alphabet-group">
+                                        <a href="#" class="link">Абакан</a>
+                                        <a href="#" class="link">Анадырь</a>
+                                        <a href="#" class="link">Архангельск</a>
+                                        <a href="#" class="link">Астрахань</a>
+                                        <a href="#" class="link">Абакан</a>
+                                        <a href="#" class="link">Анадырь</a>
+                                        <a href="#" class="link">Архангельск</a>
+                                        <a href="#" class="link">Астрахань</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+</html>
