@@ -20,7 +20,309 @@
     <link rel="stylesheet" href="/src/css/style.css">
 
 </head>
-<body>
+<body class="catalog">
+    <header class="header">
+        <div class="container">
+            <div class="header__top row align-items-center justify-content-between">
+                <div class="col-6 col-lg-4 d-flex">
+                    <div class="header__logo">
+                        <img src="/src/img/logo.svg" alt="">
+                    </div>
+                    <a href="#" id="js-open-popup"
+                        class="link header__location js-open-popup d-none d-xl-flex align-items-center">
+                        <svg class="icon">
+                            <use xlink:href="src/img/sprite.svg#location"></use>
+                        </svg>
+                        <span>Петрозаводск</span>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex justify-content-end justify-content-xl-between">
+                    <a href="#" class="link header__login d-none d-xl-flex align-items-center">
+                        <svg class="icon">
+                            <use xlink:href="src/img/sprite.svg#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </a>
+                    <button class="btn btn-trp">
+                        Новое объявление
+                    </button>
+                </div>
+            </div>
+            <div class="header__bottom row align-items-center justify-content-between">
+                <div class="d-none d-xl-block col-xl-7">
+                    <nav class="header__menu d-flex">
+                        <a href="#" class="link menu__item">Аренда</a>
+                        <a href="#" class="link menu__item">Продажа</a>
+                        <a href="#" class="link menu__item">Каталог организаций</a>
+                        <a href="#" class="link menu__item">Консультация юриста</a>
+                        <a href="#" class="link menu__item">Материалы</a>
+                    </nav>
+                </div>
+
+                <div class="col-8 col-md-7 col-lg-8 d-flex d-xl-none align-items-center">
+                    <div class="burger d-flex align-items-center js-burger">
+                        <svg class="icon icon-big">
+                            <use xlink:href="src/img/sprite.svg#burger"></use>
+                        </svg>
+                    </div>
+
+                    <a href="#" class="mobile__location js-open-popup"><span>Петрозаводск</span></a>
+                </div>
+
+                <div class="col-4 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-between">
+                    <a href="#" class="link header__action active d-flex align-items-center">
+                        <svg class="icon icon-big heart">
+                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                        </svg>
+                        <span class="action__counter">23</span>
+                        <span class="d-none d-md-inline-block">Избранное</span>
+                    </a>
+                    <a href="#" class="link header__action d-flex align-items-center">
+                        <svg class="icon icon-big">
+                            <use xlink:href="src/img/sprite.svg#rate"></use>
+                        </svg>
+                        <span class="action__counter">23</span>
+                        <span class="d-none d-md-inline-block">Сравнение</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="top">
+        <div class="container">
+            <h1>Аренда коммерческой недвижимости в <span>Петрозаводске</span></h1>
+
+            <div class="filter">
+                <div class="filter__tabs">
+                    <div class="filter__tab tab active" data-group="filter" data-target="#filterRent">Аренда</div>
+                    <div class="filter__tab tab" data-group="filter" data-target="#filterSale">Продажа</div>
+                </div>
+                <div class="filter__body">
+                    <form>
+                        <div class="filter__tab-content tab-content" data-group="filter" id="filterRent">
+                            <div class="form-control dropdown-control select" data-target="#filterObject">
+                                <label>Вид объекта</label>
+                                <input id="object" type="text">
+                                <div class="dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <input type="checkbox" id="object1" value="1">
+                                            <label for="object1" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object2" value="2">
+                                            <label for="object2" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object3" value="3">
+                                            <label for="object3" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control square" data-target="#filterSquare">
+                                <label>Площадь</label>
+                                <input id="square" type="text">
+                                <div class="dropdown square__dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control square">
+                                                <label for="square1">от</label>
+                                                <input id="square1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control dropdown-control square">
+                                                <label for="square2">до</label>
+                                                <input id="square2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 м²</li>
+                                                <li>70 м²</li>
+                                                <li>90 м²</li>
+                                                <li>100 м²</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control price" data-target="#filterPrice">
+                                <label>Цена</label>
+                                <input id="price" type="text">
+                                <div class="dropdown price__dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control price mr-6px">
+                                                <label for="price1">от</label>
+                                                <input id="price1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control price">
+                                                <label for="price2">до</label>
+                                                <input id="price2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 ₽</li>
+                                                <li>70 ₽</li>
+                                                <li>90 ₽</li>
+                                                <li>100 ₽</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" placeholder="Метро, улица или район">
+                            </div>
+                            <button class="btn btn-fill filter__btn">
+                                <span>Показать</span>
+                                <span class="btn__counter">866</span>
+                            </button>
+                        </div>
+                        <div class="filter__tab-content tab-content d-none" data-group="filter" id="filterSale">
+                            <div class="form-control dropdown-control select" data-target="#filterObject">
+                                <label>Вид объекта</label>
+                                <input id="objectSale" type="text">
+                                <div class="dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <input type="checkbox" id="object1Sale" value="1">
+                                            <label for="object1Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object2Sale" value="2">
+                                            <label for="object2Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="object3Sale" value="3">
+                                            <label for="object3Sale" class="custom-checkbox">
+                                                <svg class="icon icon-big checkbox">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox"></use>
+                                                </svg>
+                                                <svg class="icon icon-big checkbox-checked">
+                                                    <use xlink:href="src/img/sprite.svg#checkbox-checked"></use>
+                                                </svg>
+                                                <span>Торговая недвижимость</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control square" data-target="#filterSquare">
+                                <label>Площадь</label>
+                                <input id="squareSale" type="text">
+                                <div class="dropdown square__dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control square">
+                                                <label for="squareSale1">от</label>
+                                                <input id="squareSale1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control dropdown-control square">
+                                                <label for="squareSale2">до</label>
+                                                <input id="squareSale2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 м²</li>
+                                                <li>70 м²</li>
+                                                <li>90 м²</li>
+                                                <li>100 м²</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-control dropdown-control price" data-target="#filterPrice">
+                                <label>Цена</label>
+                                <input id="priceSale" type="text">
+                                <div class="dropdown price__dropdown">
+                                    <div class="filter__clear">сбросить</div>
+                                    <div class="dropdown__inner">
+                                        <div class="dropdown__item mr-6px">
+                                            <div class="form-control price mr-6px">
+                                                <label for="priceSale1">от</label>
+                                                <input id="priceSale1" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__item">
+                                            <div class="form-control price">
+                                                <label for="priceSale2">до</label>
+                                                <input id="priceSale2" type="text">
+                                            </div>
+
+                                            <ul class="suggestion-list">
+                                                <li>50 ₽</li>
+                                                <li>70 ₽</li>
+                                                <li>90 ₽</li>
+                                                <li>100 ₽</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-fill filter__btn">
+                                <span>Показать</span>
+                                <span class="btn__counter">125</span>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
     
     <div id="js-mobile-menu" class="board">
         <div class="board__background">
