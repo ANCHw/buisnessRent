@@ -186,6 +186,11 @@ a:hover .icon {
     background-color: var(--second-color);
 }
 
+.btn-trp--dark {
+    border-color: var(--gray-800);
+    color: var(--gray-800);
+}
+
 .btn__counter {
     font-size: 14px;
     line-height: 100%;
@@ -236,6 +241,7 @@ li {
     border-radius: 4px;
     background-color: transparent;
     display: flex;
+    padding: 14px 32px 14px 12px;  
 }
 
 .form-control label {
@@ -250,12 +256,15 @@ li {
     border: none;
     font-size: 16px;
     line-height: 18px;
-    pointer-events: none;
 
     flex-grow: 1;
     width: 10px;
 
     margin-right: 8px;
+}
+
+.pointer-none {
+    pointer-events: none;
 }
 
 .form-control input:focus {
@@ -264,7 +273,6 @@ li {
 
 .dropdown-control {
     position: relative;
-    padding: 14px 32px 14px 12px;  
     cursor: pointer;  
 }
 
@@ -439,6 +447,15 @@ input[type='checkbox'] {
     width: max-content;
 }
 
+.filter__tabs input[type='radio'] {
+    display: none;
+}
+
+.filter__tabs input[type='radio']:checked ~ .filter__tab {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
 .filter__tab {
     padding: 10px 20px;
     border: 1px solid var(--gray-300);
@@ -446,14 +463,15 @@ input[type='checkbox'] {
     border-radius: 4px;
     cursor: pointer;
     color: var(--gray-600);
+    display: block;
 }
 
-.filter__tab:first-child {
+.filter__tab--left {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.filter__tab:last-child {
+.filter__tab--right {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -467,15 +485,13 @@ input[type='checkbox'] {
 .filter__body {
     background-color: var(--second-color);
     padding: 16px 12px;
-}
-
-.filter__tab-content {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .filter .select {
-    width: 320px;
+    width: 390px;
     max-width: 100%;
 }
 
@@ -503,7 +519,7 @@ input[type='checkbox'] {
 }
 
 .filter .price {
-    width: 280px;
+    width: 370px;
     max-width: 100%;
 }
 
@@ -513,6 +529,11 @@ input[type='checkbox'] {
     font-size: 16px;
     line-height: 120%;
     color: var(--gray-600);
+}
+
+.filter .place {
+    width: 550px;
+    margin-right: auto;
 }
 
 .filter__clear {
@@ -1269,10 +1290,6 @@ input[type='checkbox'] {
 @media (max-width: 1199.9px) {
     .h1--padding {
         padding-right: 300px;
-    }
-
-    .filter__tab-content {
-        flex-wrap: wrap;
     }
 
     .filter .select {
