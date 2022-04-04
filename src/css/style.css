@@ -84,6 +84,10 @@ h1 {
     line-height: 120%;
 }
 
+.h1--padding {
+    padding-right: 425px;
+}
+
 h2 {
     font-weight: 700;
     font-size: 32px;
@@ -1263,6 +1267,10 @@ input[type='checkbox'] {
 /* mobile menu */
 
 @media (max-width: 1199.9px) {
+    .h1--padding {
+        padding-right: 300px;
+    }
+
     .filter__tab-content {
         flex-wrap: wrap;
     }
@@ -1310,6 +1318,10 @@ input[type='checkbox'] {
 }
 
 @media (max-width: 991.9px) {
+    .h1--padding {
+        padding-right: 0;
+    }
+
     .popular__item {
         width: 90%;
         margin: 0 12px;
@@ -1678,10 +1690,6 @@ input[type='checkbox'] {
     }
 }
 
-
-
-
-
 /* mobile filter */
 @media (max-width: 767.9px) {
     #js-filter .board__wrapper {
@@ -1707,4 +1715,8 @@ input[type='checkbox'] {
 }
 /* mobile filter */
 
+
+/* CATALOG */
+
+/* CATALOG */
 
