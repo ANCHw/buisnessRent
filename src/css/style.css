@@ -1292,24 +1292,26 @@ input[type='checkbox'] {
         padding-right: 300px;
     }
 
+    .filter__body {
+        justify-content: space-between;
+    }
+
     .filter .select {
         width: 100%;
-        margin-bottom: 8px;
     }
 
     .filter__btn {
         width: 100%;
-        margin-top: 8px;
     }
 
     .filter .square,
     .filter .price {
-        width: auto;
-        flex: 1 1 auto;
+        width: 49%;
     }
 
-    .filter .square {
-        margin-right: 8px;
+    .filter .place {
+        width: auto;
+        flex: 1 1 auto;
     }
 
     .popular__item .space-card__title {
@@ -1337,6 +1339,32 @@ input[type='checkbox'] {
 @media (max-width: 991.9px) {
     .h1--padding {
         padding-right: 0;
+    }
+
+    .filter .select {
+        order: 2;
+    }
+
+    .filter__btn {
+        order: 5; 
+        width: auto;
+        flex: 1 1 auto;
+    }
+
+    .filter__btn-map {
+        order: 4;
+    }
+
+    .filter .square,
+    .filter .price {
+        width: 48%;
+        order: 3;
+    }
+
+    .filter .place {
+        width: 100%;
+        flex: 0 1 auto;
+        order: 1;
     }
 
     .popular__item {
@@ -1499,6 +1527,10 @@ input[type='checkbox'] {
     .filter .price::after {
         font-size: 14px;
         line-height: 120%;
+    }
+
+    .filter__body {
+        gap: 8px;
     }
 
     .images__item--big {
