@@ -151,6 +151,11 @@ a {
     height: 24px;
 }
 
+.icon-small {
+    width: 16px;
+    height: 16px;
+}
+
 a:hover .icon {
     fill: var(--main-color);
 }
@@ -352,6 +357,46 @@ input[type='checkbox']:checked ~ label {
 
 input[type='checkbox'] {
     display: none;
+}
+
+.pagination {
+    margin-top: 32px;
+}
+
+.pagination__nav {
+    background: var(--second-color);
+    border-radius: 4px;
+    padding: 8px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.pagination__nav li {
+    margin-bottom: 0;
+}
+
+.pagination__nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin: 0 3px;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.pagination__nav a.active,
+.pagination__nav a:not(.disable):hover {
+    border: 1px solid #233F8A;
+}
+
+.prev.disable,
+.next.disable {
+    color: var(--gray-500);
 }
 
 
