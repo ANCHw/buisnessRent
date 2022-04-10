@@ -231,7 +231,7 @@
 
     <section class="catalog">
         <div class="container">
-            <div class="catalog__top d-flex align-items-center justify-content-between">
+            <div class="catalog__top d-flex align-items-center justify-content-between mb-12px">
                 <div class="catalog__amount">
                     Найдено <span>850</span> помещений
                 </div>
@@ -259,8 +259,99 @@
                 </div>
             </div>
             <div class="catalog__list">
+                <div class="catalog__card card d-flex ">
+                    <div class="catalog__images d-flex flex-column flex-lg-row">
+                        <div class="images__item images__item--big" style="background-image:url(/src/img/popular1.jpg)">
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <div class="images__item images__item--small d-none d-md-block"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                            <div class="images__item images__item--small d-none d-lg-block"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                            <div class="images__item images__item--small"
+                                style="background-image:url(/src/img/popular1.jpg)"></div>
+                            <div class="images__item images__item--small overlay"
+                                style="background-image:url(/src/img/popular1.jpg)"><span>+3</span></div>
+                        </div>
+                    </div>
+                    <div class="catalog__img images__item d-none" style="background-image:url(/src/img/default.jpg)">
+                    </div>
+                    <div class="catalog__info d-flex">
+                        <div class="info__left d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="info__top d-flex justify-content-between">
+                                    <div>
+                                        <div class="space-card__title mb-8px">Свободного назначения, 82.2 м²</div>
+                                        <div class="space-card__price mb-8px">199 320 000 ₽/мес</div>
+                                        <div class="space-card__params mb-8px">
+                                            <span>15 166 ₽/м²</span>
+                                            <span>3 этаж из 3</span>
+                                        </div>
+                                    </div>
+                                    <object>
+                                        <a href="" class="space-card__add-favourite d-none d-lg-block" title="Добавить в избранное">
+                                            <svg class="icon icon-big">
+                                                <use xlink:href="src/img/sprite.svg#heart"></use>
+                                            </svg>
+                                        </a>
+                                    </object>
+                                </div>
+                                <p class="space-card__text d-none d-md-block">
+                                    Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                    в 10 мин. пешком от
+                                    Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                    в 10 мин. пешком от
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row">
+                                <div class="space-card__metro d-flex">
+                                    <div class="metro__icons">
+                                        <div class="metro__icon line-red"></div>
+                                        <div class="metro__icon line-blue"></div>
+                                    </div>
+                                    <span>Верхние Лихоборы</span>
+                                </div>
+                                <div class="space-card__address">Верхнелихоборская 8</div>
+                            </div>
+                            <div class="space-card__date d-lg-none">Вчера, 12:20</div>
+                        </div>
+                        <div class="info__right d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="catalog__owner-name mb-4px d-none d-lg-block">Михаил</div>
+                                <div class="catalog__owner-status mb-12px d-none d-lg-block">Собственник</div>
+                                <button class="btn btn-trp catalog__info-btn d-none d-lg-block">Показать телефон</button>
+                                <object>
+                                    <a href="" class="space-card__add-favourite d-lg-none" title="Добавить в избранное">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                </object>
+                            </div>
+                            <div>
+                                <div class="space-card__status mb-4px">
+                                    <span title="Поднятое объявление" class="d-flex align-items-center">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#rise"></use>
+                                        </svg>
+                                        <span class="d-none d-lg-block">Поднятно</span>
+                                        
+                                    </span>
+                                    <span title="Премиум объявление" class="align-items-center d-none">
+                                        <svg class="icon icon-big">
+                                            <use xlink:href="src/img/sprite.svg#premium"></use>
+                                        </svg>
+                                        <span class="d-none d-lg-block">Премиум</span>
+                                        
+                                    </span>
+                                </div>
+                                <div class="space-card__date d-none d-lg-block">Вчера, 12:20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="catalog__card card d-flex">
-                    <div class="catalog__images d-flex">
+                    <div class="catalog__images d-none">
                         <div class="images__item images__item--big" style="background-image:url(/src/img/popular1.jpg)">
                         </div>
                         <div class="d-flex flex-column">
@@ -274,62 +365,76 @@
                                 style="background-image:url(/src/img/popular1.jpg)"><span>+3</span></div>
                         </div>
                     </div>
-                    <div class="catalog__img images__item d-none" style="background-image:url(/src/img/default.jpg)">
+                    <div class="catalog__img images__item" style="background-image:url(/src/img/default.jpg)">
                     </div>
                     <div class="catalog__info d-flex">
-                        <div class="info__left">
-                            <div class="info__top d-flex justify-content-between">
-                                <div>
-                                    <div class="space-card__title mb-8px">Свободного назначения, 82.2 м²</div>
-                                    <div class="space-card__price mb-8px">199 320 000 ₽/мес</div>
-                                    <div class="space-card__params mb-8px">
-                                        <span>15 166 ₽/м²</span>
-                                        <span>3 этаж из 3</span>
+                        <div class="info__left d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="info__top d-flex justify-content-between">
+                                    <div>
+                                        <div class="space-card__title mb-8px">Свободного назначения, 82.2 м²</div>
+                                        <div class="space-card__price mb-8px">199 320 000 ₽/мес</div>
+                                        <div class="space-card__params mb-8px">
+                                            <span>15 166 ₽/м²</span>
+                                            <span>3 этаж из 3</span>
+                                        </div>
                                     </div>
+                                    <object>
+                                        <a href="" class="space-card__add-favourite d-none d-lg-block" title="Добавить в избранное">
+                                            <svg class="icon icon-big">
+                                                <use xlink:href="src/img/sprite.svg#heart"></use>
+                                            </svg>
+                                        </a>
+                                    </object>
                                 </div>
+                                <p class="space-card__text d-none d-md-block">
+                                    Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                    в 10 мин. пешком от
+                                    Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
+                                    в 10 мин. пешком от
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row">
+                                <div class="space-card__metro d-flex mr-12px">
+                                    <div class="metro__icons">
+                                        <div class="metro__icon line-red"></div>
+                                        <div class="metro__icon line-blue"></div>
+                                    </div>
+                                    <span>Верхние Лихоборы</span>
+                                </div>
+                                <div class="space-card__address">Верхнелихоборская 8</div>
+                            </div>
+                            <div class="space-card__date d-lg-none">Вчера, 12:20</div>
+                        </div>
+                        <div class="info__right d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="catalog__owner-name mb-4px d-none d-lg-block">Михаил</div>
+                                <div class="catalog__owner-status mb-12px d-none d-lg-block">Собственник</div>
+                                <button class="btn btn-trp catalog__info-btn d-none d-lg-block">Показать телефон</button>
                                 <object>
-                                    <a href="" class="space-card__add-favourite" title="Добавить в избранное">
+                                    <a href="" class="space-card__add-favourite d-lg-none" title="Добавить в избранное">
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#heart"></use>
                                         </svg>
                                     </a>
                                 </object>
                             </div>
-                            <p class="space-card__text">
-                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
-                                в 10 мин. пешком от
-                                Аренда офисного помещения площадью 24 м2, на 3 этаже 4-этажного бизнес-центра класса B+
-                                в 10 мин. пешком от
-                            </p>
-                            <div class="space-card__metro d-flex ">
-                                <div class="metro__icons">
-                                    <div class="metro__icon line-red"></div>
-                                    <div class="metro__icon line-blue"></div>
-                                </div>
-                                <span>Верхние Лихоборы</span>
-                            </div>
-                            <div class="space-card__address">Верхнелихоборская 8</div>
-                        </div>
-                        <div class="info__right d-flex flex-column justify-content-between">
                             <div>
-                                <div>Михаил</div>
-                                <div>Собственник</div>
-                                <button class="btn btn-trp">Показать телефон</button>
-                            </div>
-                            <div>
-                                <div class="space-card__status">
-                                    <span title="Поднятое объявление" class="d-none">
+                                <div class="space-card__status mb-4px">
+                                    <span title="Поднятое объявление" class="d-flex align-items-center">
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#rise"></use>
                                         </svg>
+                                        <span class="d-none d-lg-block">Поднятно</span>
                                     </span>
-                                    <span title="Премиум объявление" class="">
+                                    <span title="Премиум объявление" class="align-items-center d-none">
                                         <svg class="icon icon-big">
                                             <use xlink:href="src/img/sprite.svg#premium"></use>
                                         </svg>
+                                        <span class="d-none d-lg-block">Премиум</span>
                                     </span>
                                 </div>
-                                <div class="space-card__date">Вчера, 12:20</div>
+                                <div class="space-card__date d-none d-lg-block">Вчера, 12:20</div>
                             </div>
                         </div>
                     </div>
@@ -337,7 +442,7 @@
                 
             </div>
 
-            <div class="pagination d-flex">
+            <div class="pagination d-none d-md-flex align-items-center">
                 <ul class="pagination__nav d-flex justify-content-center">
                     <li><a href="#" class="prev disable">←</a></li>
                     <li><a href="#" class="active">1</a></li>
@@ -349,7 +454,13 @@
                     <li><a href="#">10</a></li>
                     <li><a href="#" class="next">→</a></li>
                 </ul>
-                <a href="#" class="show__more link">Показать ещё</a>
+                <a href="#" class="show__more link link--alt link--small">Показать ещё</a>
+            </div>
+
+            <div class="d-md-none d-flex justify-content-center">
+                <a href="#" class="btn btn-fill">
+                    <span>Показать еще</span>
+                </a>
             </div>
         </div>
     </section>
@@ -494,7 +605,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="link">Показать все</a>
+                <a href="#" class="link link--alt mt-16px d-block">Показать все</a>
             </div>
         </div>
     </section>
@@ -895,6 +1006,42 @@
         </div>
     </div>
 
+    <div id="js-sort" class="board">
+        <div class="board__background">
+
+            <div class="container no-sm-paddings">
+                <div class="board__wrapper">
+
+                    <button class=" board__close no-btn js-close-popup" id="mobileMenuClose">
+                        <svg>
+                            <use xlink:href="src/img/sprite.svg#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="container mobile-sort">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="active">По релевантности</li>
+                                        <li>Сначала новые</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Сначала дешевые</li>
+                                        <li>Сначала дорогие</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Сначала большие</li>
+                                        <li>Сначала маленькие</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="js-board" class="board">
         <div class="board__background">
 
@@ -1009,6 +1156,7 @@
             </div>
         </div>
     </div>
+    
 
     <script src="src/js/jquery-3.6.0.slim.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

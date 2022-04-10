@@ -173,7 +173,7 @@ $(document).ready( function() {
             const modalBack = modalParent.querySelector('.board__background')
             const modalChild = modalParent.querySelector('.board__wrapper')
         
-            const openModalBtn = document.querySelectorAll('.dropdown-control')
+            const openModalBtn = document.querySelectorAll('.filter .dropdown-control')
             const closeModalBtn = modalParent.querySelectorAll('.js-close-popup')
         
             const body = document.querySelector('body')
@@ -211,6 +211,51 @@ $(document).ready( function() {
             }
         }
         jsFilter()
+     
+    }
+
+    // mobile sort
+    if ($(window).width() < 768) {
+        function jsSort(){
+            const modalParent = document.querySelector('#js-sort')
+        
+            const modalBack = modalParent.querySelector('.board__background')
+            const modalChild = modalParent.querySelector('.board__wrapper')
+        
+            const openModalBtn = document.querySelectorAll('.dropdown-control.sort')
+            const closeModalBtn = modalParent.querySelectorAll('.js-close-popup')
+        
+            const body = document.querySelector('body')
+        
+            modalBack.addEventListener('click', closeModal)
+        
+            openModalBtn.forEach(el => {
+                el.addEventListener('click', openModal)
+            })
+        
+            closeModalBtn.forEach(el => {
+                el.addEventListener('click', closeModal)
+            })
+        
+            modalChild.addEventListener('click', stopPropagation)
+        
+            function closeModal(){
+                modalParent.classList.remove('active')
+                body.style.overflow = 'auto'
+            }
+        
+            function openModal(){
+                modalParent.classList.add('active')
+                body.style.overflow = 'hidden'
+                const target = document.querySelector(this.dataset.target)
+                target.classList.add('active')
+            }
+        
+            function stopPropagation(e){
+                e.stopPropagation()
+            }
+        }
+        jsSort()
      
     }
 });
