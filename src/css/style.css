@@ -215,6 +215,11 @@ a:hover .icon {
 
     cursor: pointer;
     padding: 12px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
 }
 
 .btn-fill {
@@ -241,6 +246,17 @@ a:hover .icon {
     color: var(--gray-800);
 }
 
+.btn-grey {
+    background-color: rgba(35, 63, 138, 0.2);
+    border: 1px solid rgba(35, 63, 138, 0.2);
+    color: var(--main-color);
+}
+
+.btn-grey:hover {
+    background-color: var(--second-color);
+    border-color: var(--main-color);
+}
+
 .btn__counter {
     font-size: 14px;
     line-height: 100%;
@@ -248,6 +264,10 @@ a:hover .icon {
     border-radius: 4px;
     padding: 4px 6px;
     margin-left: 8px;
+}
+
+.btn .icon {
+    margin-right: 0;
 }
 
 .list-no-marker {
@@ -2059,7 +2079,110 @@ input[type='checkbox'] {
 /* mobile filter */
 
 
-/* CATALOG */
+/* OBJECT */
+.link.disabled {
+    color: var(--gray-500);
+}
 
-/* CATALOG */
+.link.disabled:hover {
+    color: var(--gray-500);
+}
+
+.link-more {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-more:hover {
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.breadcrumbs li {
+    padding: 0 4px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.breadcrumbs li:not(:last-child) {
+    padding-right: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '·';
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.breadcrumbs .link {
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.object__description {
+    width: 654px;
+}
+
+.object__description h2 {
+    margin-bottom: 12px;
+}
+
+.object__description p {
+    margin-bottom: 16px;
+}
+
+.object__row {
+    display: flex;
+    column-gap: 24px;
+}
+
+/* .object__images {
+    margin-right: 24px;
+} */
+
+.object__images-desktop .images__item--big {
+    width: 619px;
+    height: 384px;
+    margin-bottom: 0;
+    margin-right: 16px;
+}
+
+.object__images-desktop .images__item--small {
+    width: 165px;
+    height: 120px;
+    margin-bottom: 12px;
+}
+
+.object__info {
+    padding: 16px;
+    height: max-content;
+}
+
+.object__title {
+    font-size: 16px;
+    line-height: 120%;
+    margin-bottom: 8px;
+}
+
+.object__buttons {
+    margin-top: 24px;
+}
+
+.object__buttons .btn {
+    margin-bottom: 8px;
+}
+
+.object__owner {
+    text-align: center;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--gray-500);
+}
+/* OBJECT */
 
